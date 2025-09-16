@@ -80,37 +80,48 @@ java -cp target/classes:target/dependency/* com.example.demo.AzurePostgreSqlAadD
 When successful, you should see output similar to:
 
 ```
-[2025-09-16 07:03:13] [INFO   ] === Azure PostgreSQL AAD Authentication Demo === 
-[2025-09-16 07:03:13] [INFO   ] Loading application properties... 
-[2025-09-16 07:03:13] [INFO   ] Database URL: jdbc:postgresql://pg-lab-dd-14.postgres.database.azure.com:5432/postgres?sslmode=require&authenticationPluginClassName=com.azure.identity.extensions.jdbc.postgresql.AzurePostgresqlAuthenticationPlugin 
-[2025-09-16 07:03:13] [INFO   ] User (Client ID): jpwest-im 
-[2025-09-16 07:03:13] [INFO   ] Connecting to Azure PostgreSQL with AAD Managed Identity... 
-[2025-09-16 07:03:13] [INFO   ] Attempting to connect with URL: jdbc:postgresql://pg-lab-dd-14.postgres.database.azure.com:5432/postgres?sslmode=require&authenticationPluginClassName=com.azure.identity.extensions.jdbc.postgresql.AzurePostgresqlAuthenticationPlugin 
-[2025-09-16 07:03:13] [INFO   ] User (Client ID): jpwest-im 
-[2025-09-16 07:03:13] [INFO   ] Calling DriverManager.getConnection... 
-[2025-09-16 07:03:15] [INFO   ] Successfully connected to Azure PostgreSQL using AAD authentication 
-[2025-09-16 07:03:15] [INFO   ] Testing database connection... 
-[2025-09-16 07:03:15] [INFO   ] PostgreSQL Version: PostgreSQL 14.17 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0, 64-bit 
-[2025-09-16 07:03:15] [INFO   ] Current Database: postgres 
-[2025-09-16 07:03:15] [INFO   ] Current User: jpwest-im 
-[2025-09-16 07:03:15] [INFO   ] Connection test successful! 
-[2025-09-16 07:03:15] [INFO   ] Performing comprehensive health check... 
-[2025-09-16 07:03:15] [INFO   ] ✅ Basic query execution: PASSED 
-[2025-09-16 07:03:15] [INFO   ] Permission Summary: 
-[2025-09-16 07:03:15] [INFO   ]   - Database CREATE: ✅ 
-[2025-09-16 07:03:15] [INFO   ]   - Database CONNECT: ✅ 
-[2025-09-16 07:03:15] [INFO   ]   - Schema CREATE: ✅ 
-[2025-09-16 07:03:15] [INFO   ]   - Schema USAGE: ✅ 
-[2025-09-16 07:03:15] [INFO   ] ✅ Database permissions: SUFFICIENT 
-[2025-09-16 07:03:15] [SEVERE ] Health check failed 
-[2025-09-16 07:03:15] [INFO   ] Azure PostgreSQL Configuration: 
-[2025-09-16 07:03:15] [INFO   ]   - azure.extensions: PGAUDIT,PG_BUFFERCACHE,PG_STAT_STATEMENTS,UUID-OSSP,VECTOR,PG_VISIBILITY 
-[2025-09-16 07:03:15] [INFO   ]   - shared_preload_libraries: pg_cron,pg_stat_statements,pgaudit,azure,pg_qs,pgaadauth,pgms_stats,pgms_wait_sampling,pg_availability 
-[2025-09-16 07:03:15] [INFO   ]   - log_statement: mod 
-[2025-09-16 07:03:15] [INFO   ]   - log_min_duration_statement: -1 
-[2025-09-16 07:03:15] [INFO   ]   - max_connections: 4985 
-[2025-09-16 07:03:15] [INFO   ]   - ssl: on 
-[2025-09-16 07:03:15] [INFO   ] Demo completed successfully! 
+[2025-09-16 07:31:32] [INFO   ] === Azure PostgreSQL AAD Authentication Demo === 
+[2025-09-16 07:31:32] [INFO   ] Loading application properties... 
+[2025-09-16 07:31:32] [INFO   ] Database URL: jdbc:postgresql://pg-lab-dd-14.postgres.database.azure.com:5432/postgres?sslmode=require&authenticationPluginClassName=com.azure.identity.extensions.jdbc.postgresql.AzurePostgresqlAuthenticationPlugin 
+[2025-09-16 07:31:32] [INFO   ] User (Client ID): jpwest-im 
+[2025-09-16 07:31:32] [INFO   ] Connecting to Azure PostgreSQL with AAD Managed Identity... 
+[2025-09-16 07:31:32] [INFO   ] Attempting to connect with URL: jdbc:postgresql://pg-lab-dd-14.postgres.database.azure.com:5432/postgres?sslmode=require&authenticationPluginClassName=com.azure.identity.extensions.jdbc.postgresql.AzurePostgresqlAuthenticationPlugin 
+[2025-09-16 07:31:32] [INFO   ] User (Client ID): jpwest-im 
+[2025-09-16 07:31:32] [INFO   ] Calling DriverManager.getConnection... 
+[2025-09-16 07:31:34] [INFO   ] Successfully connected to Azure PostgreSQL using AAD authentication 
+[2025-09-16 07:31:34] [INFO   ] Testing database connection... 
+[2025-09-16 07:31:34] [INFO   ] PostgreSQL Version: PostgreSQL 14.17 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0, 64-bit 
+[2025-09-16 07:31:34] [INFO   ] Current Database: postgres 
+[2025-09-16 07:31:34] [INFO   ] Current User: jpwest-im 
+[2025-09-16 07:31:34] [INFO   ] Connection test successful! 
+[2025-09-16 07:31:34] [INFO   ] Performing comprehensive health check... 
+[2025-09-16 07:31:34] [INFO   ] ✅ Basic query execution: PASSED 
+[2025-09-16 07:31:34] [INFO   ] Permission Summary: 
+[2025-09-16 07:31:34] [INFO   ]   - Database CREATE: ✅ 
+[2025-09-16 07:31:34] [INFO   ]   - Database CONNECT: ✅ 
+[2025-09-16 07:31:34] [INFO   ]   - Schema CREATE: ✅ 
+[2025-09-16 07:31:34] [INFO   ]   - Schema USAGE: ✅ 
+[2025-09-16 07:31:34] [INFO   ] ✅ Database permissions: SUFFICIENT 
+[2025-09-16 07:31:34] [INFO   ] Connection Metadata: 
+[2025-09-16 07:31:34] [INFO   ]   - Database Product: PostgreSQL 
+[2025-09-16 07:31:34] [INFO   ]   - Database Version: 14.17 
+[2025-09-16 07:31:34] [INFO   ]   - Driver Name: PostgreSQL JDBC Driver 
+[2025-09-16 07:31:34] [INFO   ]   - Driver Version: 42.7.5 
+[2025-09-16 07:31:34] [INFO   ]   - JDBC Version: 4.2 
+[2025-09-16 07:31:34] [INFO   ]   - Connection URL: jdbc:postgresql://pg-lab-dd-14.postgres.database.azure.com:5432/postgres?sslmode=require&authenticationPluginClassName=com.azure.identity.extensions.jdbc.postgresql.AzurePostgresqlAuthenticationPlugin 
+[2025-09-16 07:31:34] [INFO   ]   - Username: jpwest-im 
+[2025-09-16 07:31:34] [INFO   ]   - Read Only: false 
+[2025-09-16 07:31:34] [INFO   ]   - Auto Commit: true 
+[2025-09-16 07:31:34] [INFO   ]   - Transaction Isolation: READ_COMMITTED 
+[2025-09-16 07:31:34] [INFO   ] Health check completed successfully 
+[2025-09-16 07:31:34] [INFO   ] Azure PostgreSQL Configuration: 
+[2025-09-16 07:31:34] [INFO   ]   - azure.extensions: PGAUDIT,PG_BUFFERCACHE,PG_STAT_STATEMENTS,UUID-OSSP,VECTOR,PG_VISIBILITY 
+[2025-09-16 07:31:34] [INFO   ]   - shared_preload_libraries: pg_cron,pg_stat_statements,pgaudit,azure,pg_qs,pgaadauth,pgms_stats,pgms_wait_sampling,pg_availability 
+[2025-09-16 07:31:34] [INFO   ]   - log_statement: mod 
+[2025-09-16 07:31:34] [INFO   ]   - log_min_duration_statement: -1 
+[2025-09-16 07:31:34] [INFO   ]   - max_connections: 4985 
+[2025-09-16 07:31:34] [INFO   ]   - ssl: on 
+[2025-09-16 07:31:34] [INFO   ] Demo completed successfully! 
 
 === Demo execution completed ===
 ```

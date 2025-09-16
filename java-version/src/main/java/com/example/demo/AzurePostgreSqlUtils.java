@@ -46,13 +46,6 @@ public class AzurePostgreSqlUtils {
                 log.warning("⚠️ Database permissions: LIMITED");
             }
             
-            // Check SSL connection
-            if (checkSslConnection(connection)) {
-                log.info("✅ SSL connection: ACTIVE");
-            } else {
-                log.warning("❌ SSL connection: NOT ACTIVE");
-            }
-            
             // Display connection metadata
             displayConnectionMetadata(connection);
             
@@ -91,22 +84,6 @@ public class AzurePostgreSqlUtils {
                 log.info("  - Schema USAGE: " + (canUseSchema ? "✅" : "❌"));
                 
                 return canConnect && canUseSchema; // Minimum required permissions
-            }
-        }
-        return false;
-    }
-    
-    /**
-     * Check if SSL connection is active
-     */
-    private static boolean checkSslConnection(Connection connection) throws SQLException {
-        String sql = "SELECT ssl_is_used() as ssl_active";
-        
-        try (Statement stmt = connection.createStatement();
-             ResultSet rs = stmt.executeQuery(sql)) {
-            
-            if (rs.next()) {
-                return rs.getBoolean("ssl_active");
             }
         }
         return false;
